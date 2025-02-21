@@ -7,3 +7,5 @@
  -Récupérer un commit depuis le remote en faisant fetch 
  -Mettre des commentaires 
  -Maou a tout cassé
+ -Mise à jour 
+ -Test
