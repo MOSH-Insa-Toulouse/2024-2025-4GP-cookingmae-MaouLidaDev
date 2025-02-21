@@ -6,3 +6,4 @@
  -Récupérer un dycommit deouis le remote
  -Récupérer un commit depuis le remote en faisant fetch 
  -Mettre des commentaires 
+ -Maëlys a tout cassé
