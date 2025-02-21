@@ -3,4 +3,4 @@
 ## Liste de tâches pour notre projet
  -Etre bon en codage
  -Récupérer un commit deouis le remote
- -Truc
+ -Mettre des commentaires 
