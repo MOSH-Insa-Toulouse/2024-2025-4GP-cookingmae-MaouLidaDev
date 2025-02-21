@@ -2,5 +2,5 @@
 
 ## Liste de tâches pour notre projet
  -Etre bon en codage
- -Récupérer un commit deouis le remote
+ -Récupérer un dycommit deouis le remote
  -Mettre des commentaires 
