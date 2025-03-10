@@ -22,3 +22,14 @@
 * 1 AOP LTC1050
 * 1 Écran OLED01
 * 1 Module Bluetooth HC-05
+
+### Code Arduino 
+
+### Création du Shield sous Kicad
+
+### Simulation du circuit sour Ltspice
+
+### Banc de test
+
+### Datasheet 
+
