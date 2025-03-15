@@ -3619,6 +3619,16 @@
 		)
 		(uuid "901931b0-25db-41c6-9eec-4f8f566f846b")
 	)
+	(text "Projet capteur M&M 2025"
+		(exclude_from_sim no)
+		(at 198.882 189.484 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "bca07204-4ccf-4487-adcf-1a34442bec73")
+	)
 	(text "Rentre sur l'ampli\n"
 		(exclude_from_sim no)
 		(at 58.42 187.706 0)
