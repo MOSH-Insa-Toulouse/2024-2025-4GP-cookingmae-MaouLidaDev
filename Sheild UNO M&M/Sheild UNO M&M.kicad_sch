@@ -3757,8 +3757,8 @@
 		(uuid "1517c1ca-29bc-47dd-8a6f-ad843f1da580")
 	)
 	(no_connect
-		(at 20.32 36.83)
-		(uuid "1d624174-32ad-4da5-a735-9bda4b740b60")
+		(at 74.93 26.67)
+		(uuid "32152f0f-d48e-496c-8c09-2ab5dfa10a62")
 	)
 	(no_connect
 		(at 41.91 130.81)
@@ -3771,6 +3771,10 @@
 	(no_connect
 		(at 19.05 34.29)
 		(uuid "4ababad9-19ac-4fb2-96f9-08b0db973bbd")
+	)
+	(no_connect
+		(at 74.93 29.21)
+		(uuid "8a0f8ad2-2ff1-4cbf-95c4-919c898b9784")
 	)
 	(no_connect
 		(at 21.59 64.77)
@@ -5302,7 +5306,7 @@
 	)
 	(global_label "5V"
 		(shape input)
-		(at 143.51 38.1 270)
+		(at 143.51 39.37 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5312,7 +5316,7 @@
 		)
 		(uuid "91e7bc9c-7a3d-4031-8374-c6d22c7801ac")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 143.51 43.4784 90)
+			(at 143.51 44.7484 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7481,7 +7485,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Une_Librairie_d_empreinte:PinSocket_1x02_P2.54mm_Vertical_Header_Empreinte"
+		(property "Footprint" "Une_Librairie_d_empreinte:PinSocket_1x02_P2.54mm_Vertical_Modifié"
 			(at 143.51 137.16 0)
 			(effects
 				(font
@@ -7525,7 +7529,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 143.51 38.1 0)
+		(at 143.51 39.37 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7534,7 +7538,7 @@
 		(fields_autoplaced yes)
 		(uuid "7c3636df-19f4-48f6-ad3e-598e2ef47ba6")
 		(property "Reference" "#FLG0105"
-			(at 143.51 36.195 0)
+			(at 143.51 37.465 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7543,7 +7547,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 143.51 33.02 0)
+			(at 143.51 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7551,7 +7555,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 143.51 38.1 0)
+			(at 143.51 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7560,7 +7564,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 143.51 38.1 0)
+			(at 143.51 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7569,7 +7573,7 @@
 			)
 		)
 		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 143.51 38.1 0)
+			(at 143.51 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7683,7 +7687,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Une_Librairie_d_empreinte:PinSocket_1x02_P2.54mm_Vertical_Header_Empreinte"
+		(property "Footprint" "Une_Librairie_d_empreinte:PinSocket_1x02_P2.54mm_Vertical_Modifié"
 			(at 106.68 170.18 0)
 			(effects
 				(font
