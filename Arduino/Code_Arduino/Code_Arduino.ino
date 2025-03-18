@@ -19,12 +19,12 @@ Adafruit_SSD1306 ecranOLED(nombreDePixelsEnLargeur, nombreDePixelsEnHauteur, &Wi
 #define Tx_pin 6
 #define Rx_pin 7  
 #define CS_pin 10  
-#define SI_pin 11 ?
-#define SCK_pin 13 ?
+#define SI_pin 11 
+#define SCK_pin 13 
 #define AmpOut_pin A0
 #define FlexOut_pin A1
-#define SDA_pin A4 ?
-#define SCL_pin A5 ?        
+#define SDA_pin A4 
+#define SCL_pin A5         
 
 #define baudrate 9600
 SoftwareSerial mySerial(Rx_pin,Tx_pin); //D�finition du software serial
@@ -33,22 +33,16 @@ const float VCC = 5.0;      // voltage at Ardunio 5V line
 const float RDiv = 25000.0 ;
 float Rflex;
 float Vflex;
-int 
+int valeur_pota;
 float VAmp;
 int volatile encodeur = 0;
 bool enco_plus;
 bool enco_moins;
-
-const int typeFlex 0;
-const int typeAmp 1;
-
-unsigned long temps_courant;
-unsigned long temps_precedent_OLED = 0;
-const long intervalle_OLED = 2000;   
+unsigned long temps_courant;   
 unsigned long temps_precedent_Flex = 0;
 const long intervalle_Flex = 500;
-unsigned long temps_precedent_Blue = 0;
-const long intervalle_Blue = 3;   
+unsigned long temps_precedent_Amp = 0;
+const long intervalle_Amp = 500   
 
 
 void setup() {
@@ -62,32 +56,13 @@ void setup() {
 }
 
 void loop() {
-  Gesttion_Bluetooth();
-  Gestion_Pota_Dig(MPC_WRITE,);
-  Gestion_OLED();
-  Gestion_Flex();
+  Configuration();
+  Menu(choix);
 }
 
 void Setup_Bluetooth() {
   pinMode(Rx_pin,INPUT);
   pinMode(Tx_pin,OUTPUT);
-}
-
-void Gestion_Bluetooth(float data, int type) {
-  temps_courant = millis();
-  if (temps_courant - temps_precedent_Blue > intervalle_Blue) {  
-    temps_precedent_Blue = temps_courant;
-    switch (type) {
-      case 1 : 
-        mySerial.write("La résistance du Flex est de ")
-        mySerial.write(data)
-        mySerial.write(" Ohms")
-      case 2 : 
-        mySerial.write("La résistance du capteur est de ")
-        mySerial.write(data)
-        mySerial.write(" Ohms")
-    }
-  }
 }
 
 void Setup_Pota_Dig() {
@@ -96,56 +71,22 @@ void Setup_Pota_Dig() {
   SPI.begin(); 
 }
 
-void Gestion_Pota_Dig(uint8_t cmd, uint8_t data) {
+void Setup_Ampli() {
+  pinMode(AmpOut_pin,INPUT);
+}
+
+void Gestion_Pota_Dig() {
   SPI.beginTransaction(SPISettings(14000000, MSBFIRST, SPI_MODE0)); //https://www.arduino.cc/en/Reference/SPISettings
   digitalWrite(CS_pin, LOW); // SS pin low to select chip
-  SPI.transfer(cmd);        // Send command code
-  SPI.transfer(data);       // Send associated value
+  SPI.transfer(MCP_WRITE);        // Send command code
+  SPI.transfer(valeur_pota);       // Send associated value
   digitalWrite(CS_pin, HIGH);// SS pin high to de-select chip
   SPI.endTransaction();
 }
 
-void Gestion_OLED(float data, int type) {
-  temps_courant = millis();
-  if (temps_courant - temps_precedent_OLED >= intervalle_OLED) { 
-    temps_precedent_OLED = temps_courant;
-    byte tailleDeCaractere = 2;
-    if(!ecranOLED.begin(SSD1306_SWITCHCAPVCC, adresseI2CecranOLED))
-        while(1);                               // Arrêt du programme (boucle infinie) si échec d'initialisation
-
-        ecranOLED.clearDisplay();                                  
-        ecranOLED.setTextSize(tailleDeCaractere);                   
-        ecranOLED.setCursor(0, 0);
-        switch (type) {                                 
-          case 0:
-            ecranOLED.print("La résistance du Flex est de ");
-            ecranOLED.println(data);
-            ecran.OLED.print(" Ohms").
-            break;          
-          case 1: 
-            ecranOLED.print("La résistance du capteur est de ");
-            ecranOLED.println(data);
-            ecran.OLED.print(" Ohms").
-            break;        
-        } 
-      
-      
-  }    
-}
 
 void Setup_Flex() {
   pinMode(FlexOut_pin,INPUT);
-}
-
-void Gestion_Flex() {
-  temps_courant = millis();
-  if (temps_courant - temps_precedent_Flex >= intervalle_Flex) {  
-    temps_precedent_Flex = temps_courant;
-    Vflex = analogRead(FlexOut_pin) * VCC / 1023.0;
-    Rflex = RDiv * (VCC / Vflex - 1.0);
-    Gestion_OLED(Rflex,typeFlex);
-    Gestion_Bluetooth(Rflex,typeFlex);
-  }
 }
 
 void Setup_Encodeur() {
@@ -156,6 +97,15 @@ void Setup_Encodeur() {
   attachInterrupt(0, Gestion_Encodeur, RISING);
 }
 
+void Gestion_Pota_Dig() {
+  SPI.beginTransaction(SPISettings(14000000, MSBFIRST, SPI_MODE0)); //https://www.arduino.cc/en/Reference/SPISettings
+  digitalWrite(CS_pin, LOW); // SS pin low to select chip
+  SPI.transfer(MCP_WRITE);        // Send command code
+  SPI.transfer(valeur_pota);       // Send associated value
+  digitalWrite(CS_pin, HIGH);// SS pin high to de-select chip
+  SPI.endTransaction();
+}
+
 void Gestion_Encodeur() {
   if (digitalRead(CLK_pin)==HIGH && digitalRead(DT_pin)==HIGH) {
     encodeur++;
@@ -164,13 +114,69 @@ void Gestion_Encodeur() {
   }
 }
 
-void Setup_Ampli() {
-  pinMode(AmpOut_pin,INPUT);
+void MesureFlex() {
+  temps_courant = millis();
+  if (temps_courant - temps_precedent_Flex >= intervalle_Flex) {  
+    temps_precedent_Flex = temps_courant;
+    ecranOLED.clearDisplay();                                   // Effaçage de l'intégralité du buffer
+    ecranOLED.setTextSize(1);                   // Taille des caractères (1:1, puis 2:1, puis 3:1)
+    ecranOLED.setCursor(0, 0);
+    ecranOLED.setTextColor(SSD1306_WHITE, SSD1306_BLACK);   // Couleur du texte, et couleur du fond
+    ecranOLED.println(F("Mesure Flex Sensor:"));
+    ecranOLED.display();
+    Vflex = analogRead(FlexOut_pin) * VCC / 1023.0;
+    Rflex = RDiv * (VCC / Vflex - 1.0);
+    ecranOLED.println(Rflex);
+    Serial.println(Rflex);
+    mySerial.wrtite(Rflex);
+  }
 }
 
-void Gestion_Ampli() {
-  VAmp=VCC*analogRead(AmpOut_pin)/1023.0
+void MesureAmp() {
+  temps_courant = millis();
+  if (temps_courant - temps_precedent_Amp >= intervalle_Amp) {  
+    temps_precedent_Amp = temps_courant;
+    ecranOLED.clearDisplay();                                   // Effaçage de l'intégralité du buffer
+    ecranOLED.setTextSize(1);                   // Taille des caractères (1:1, puis 2:1, puis 3:1)
+    ecranOLED.setCursor(0, 0);
+    ecranOLED.setTextColor(SSD1306_WHITE, SSD1306_BLACK);   // Couleur du texte, et couleur du fond
+    ecranOLED.println(F("Mesure Ampli :"));
+    ecranOLED.display();
+    VAmp = analogRead(AmpOut_pin) * VCC / 1023.0;
+    
+    ecranOLED.println(VAmp);
+    Serial.println(VAmp);
+    mySerial.wrtite(VAmp);
+  }
 }
+
+void Menu() {
+  switch (encodeur) {
+    case 0 :
+      MesureAmp();
+      break;
+    case 1 :
+      MesureFlex();
+      break; 
+  }
+}
+
+void Configuration() {
+  while (mySerial.available()) {
+    encodeur = mySerial.read();
+  }
+  Gestion_Pota_Dig();
+  delay(1000);
+}
+
+
+
+
+
+
+
+
+
 
 
 
