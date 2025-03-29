@@ -2,11 +2,9 @@
 
 ## SOMMAIRE
 *** 
-- [2024-2025-4GP-cookingmae-MaouLidaDev](#2024-2025-4gp-cookingmae-maoulidadev)
-  - [SOMMAIRE](#sommaire)
     - [But du projet](#but-du-projet)
     - [Livrables](#livrables)
-  - [Matériel donnée](#matériel-donnée)
+    - [Matériel donnée](#matériel-donnée)
     - [Simulation du circuit sous Ltspice](#simulation-du-circuit-sous-ltspice)
     - [Création du Shield sous Kicad](#création-du-shield-sous-kicad)
     - [Code Arduino](#code-arduino)
@@ -15,7 +13,7 @@
     - [Datasheet](#datasheet)
     - [Conclusion](#conclusion)
     - [Contact](#contact)
-  
+***  
 
 ### But du projet
 
@@ -87,4 +85,7 @@ Le PCB a été réalisé au sein de deux départements de l’INSA Toulouse, le 
 ### Conclusion
 
 ### Contact
+
+-Hamadi Maoulida: mhamadi@insa-toulouse.fr
+-Tartera Maëlys : tartera@insa-toulouse.fr
 
