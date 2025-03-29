@@ -2,17 +2,17 @@
 
 ## SOMMAIRE
 *** 
-- [But du projet](#but-du-projet)
-- [Livrables](#livrables)
-- [Matériel donnée](#matériel-donnée)
-- [Simulation du circuit sous Ltspice](#simulation-du-circuit-sous-ltspice)
-- [Création du Shield sous Kicad](#création-du-shield-sous-kicad)
-- [Code Arduino](#code-arduino)
-- [Application Android sous MIT App Inventor](#application-android-sous-mit-app-inventor)
-- [Banc de test](#banc-de-test)
-- [Datasheet](#datasheet)
-- [Conclusion](#conclusion)
-- [Contact](#contact)
+[But du projet](#but-du-projet)
+[Livrables](#livrables)
+[Matériel donnée](#matériel-donnée)
+[Simulation du circuit sous Ltspice](#simulation-du-circuit-sous-ltspice)
+[Création du Shield sous Kicad](#création-du-shield-sous-kicad)
+[Code Arduino](#code-arduino)
+[Application Android sous MIT App Inventor](#application-android-sous-mit-app-inventor)
+[Banc de test](#banc-de-test)
+[Datasheet](#datasheet)
+[Conclusion](#conclusion)
+[Contact](#contact)
 ***  
 
 ### But du projet
