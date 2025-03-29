@@ -1,5 +1,22 @@
 # 2024-2025-4GP-cookingmae-MaouLidaDev
 
+## SOMMAIRE
+*** 
+- [2024-2025-4GP-cookingmae-MaouLidaDev](#2024-2025-4gp-cookingmae-maoulidadev)
+  - [SOMMAIRE](#sommaire)
+    - [But du projet](#but-du-projet)
+    - [Livrables](#livrables)
+  - [Matériel donnée](#matériel-donnée)
+    - [Simulation du circuit sous Ltspice](#simulation-du-circuit-sous-ltspice)
+    - [Création du Shield sous Kicad](#création-du-shield-sous-kicad)
+    - [Code Arduino](#code-arduino)
+    - [Application Android sous MIT App Inventor](#application-android-sous-mit-app-inventor)
+    - [Banc de test](#banc-de-test)
+    - [Datasheet](#datasheet)
+    - [Conclusion](#conclusion)
+    - [Contact](#contact)
+  
+
 ### But du projet
 
 Le but du projet est de pouvoir venir comparer deux technologies de jauge de contrainte.
@@ -39,7 +56,7 @@ Afin de repondre à la question "est ce qu'il est possible d'obtenir les mêmes 
 * 1 Écran OLED01
 * 1 Module Bluetooth HC-05
 
-### Simulation du circuit sour Ltspice
+### Simulation du circuit sous Ltspice
 
 Nous souhaitons pourvoir récupérer la resistance de notre capteur de Graphite. Pour se faire, nous proposons un montage d'amplification avec 3 filtres de sorte à récupérer une tension en sortie de ce dernier et de mettre cette tension de sortie au niveau d'une entrée analogique de notre carte Arduino. 
 Comme la résistance de notre capteur est assez importante, cela implique 
@@ -52,8 +69,6 @@ une résistance variable de l'ordre du gigaohm
 . Le courant alors généré lorsque l'on applique une tension de 5V aux bornes du capteur est très faible (de l'ordre de la dizaine de nanoampères). Ainsi, pour récupérer et pouvoir analyser ce signal, nous devons l'amplifier. C'est pourquoi nous avons utilisé un montage transimpédance constitué d'un amplificateur opérationnel (AOP) pour fournir un signal en tension suffisant au convertisseur analogique-numérique (ADC) d'une carte Arduino UNO. \
 Nous avons testé ce montage sur le logiciel LTspice basé sur [ce schéma](https://github.com/MOSH-Insa-Toulouse/2024-2025-4GP-cookingmae-MaouLidaDev/blob/main/Images/SchemaLTSpice.png) 
 
-### Code Arduino 
-
 
 ### Création du Shield sous Kicad
 
@@ -61,9 +76,15 @@ Voici ci-dessus le circuit imprimé réalisé à partir d’un calque de PCB.
 
 Le PCB a été réalisé au sein de deux départements de l’INSA Toulouse, le Génie Électrique et Informatique et le Génie Physique. Il a été fabriqué avec une plaquette d’époxy recouverte d’une couche de cuivre d’environ 60𝝻m. Nous avons imprimé sur du calque le circuit ci-dessus, puis nous avons insolé aux UVs notre plaquette avec ce calque pendant une dizaine de minutes. Après avoir retiré la partie de résine non isolée avec un révélateur, nous avons plongé notre plaquette dans un bain de percholorure de fer. Cela a permis de retirer le cuivre qui n’était pas protégé et de révéler les pistes de notre circuit.
 
+### Code Arduino 
 
+### Application Android sous MIT App Inventor
 
 ### Banc de test
 
 ### Datasheet 
+
+### Conclusion
+
+### Contact
 
