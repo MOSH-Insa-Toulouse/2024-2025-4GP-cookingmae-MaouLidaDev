@@ -96,12 +96,44 @@ Voici ci-dessous une image de notre carte une fois imprimée et une fois tout le
 
 ### Banc de test
 
+Pour pouvoir compléter notre datasheet, nous devons évaluer les performances de notre capteur à travers un banc de test. Pour cela, nous utiliserons un demi cylindre à rayon variable dont nous connaissons préalablement le rayon de courbure: ![banc_test](https://github.com/MOSH-Insa-Toulouse/2024-2025-4GP-cookingmae-MaouLidaDev/blob/main/Images/BancDeTest.PNG)
+
+Ce banc de test a été imprimé en 3D et dispose de demis-cercles de rayons variant de 2cm à 5cm avec un pas de 0,5cm par demi cercle.   
+
+Pour évaluer notre capteur en graphite, on veut pouvoir connaître la variation de résistance relative du capteur en fonction de la déformation subie. Nous notons la variation de résistance relative: $\frac{\Delta R}{R_0}$  et la déformation:  $\epsilon=\frac{e}{D}$ avec ${e}$ l'épaisseur de notre papier que l'on a mesuré à ..... et ${D}$ le diamètre du cercle choisit. Il est ainsi aisé de determiner la déformation associée à chaque demi-cercle et il ne reste plus que à mesurer la résistance ${R_0}$ de notre capteur au repos et la variation de résistance de ce dernier lorsqu'on vient le plaquer contre les différents demis-cercles. 
+
+On obtient ainsi la courbe de la variation de résistance en fonction de la déformation. Nous testons notre capteur pour differentes compositions en particule de graphite en compression et aussi en tension.
+
+
+
+De même, nous pouvons établir uniquement en compression cette fois, la courbe de variation de resistance du capteur commercial : "le flex sensor". Nous obtenons: 
+
+
+
+De nos observations, on constate que la résistance diminue lorsque nous sommes en compression, ce qui est normal car les particules de graphites se rapprochent les unes des autres et permettent une meilleure conductivité. Logiquement, en tension, la résistance augmente puisque qu'on rend la distance entre chaque particule de graphite beaucoup plus grande. 
+On constate aussi que ces variations de résistance dépendent beaucoup du niveau de gras du grain en graphite que nous avons utilisé pour notre jauge. Plus le crayon est gras, moins la variation relative de résistance est élevée. 
+
+NB: Il y'a certaines zones d'incertitudes à prendre en compte lors de l'analyses des performances de nos capteurs. En effet, entre chaque capteur testé, il est impossible d'estimer réellement la quantité de graphite déposé. De plus, il est difficile d'estimer si le banc de test élaboré permet de tester sans dégrader la qualité de nos capteurs. Il serait ainsi intéressant d'élaborer un nouveau banc de test utilisant un servo-moteur. 
+
 ### Datasheet 
+
+Pour pouvez retrouver la datasheet [ici](https://github.com/MOSH-Insa-Toulouse/2024-2025-4GP-cookingmae-MaouLidaDev/blob/main/Datasheet/Datasheet_capteur_2025.pptx)
 
 ### Conclusion
 
+Le but de ce projet était de venir comparer une technologie de jauge de contrainte commerciale: "Flex sensor" avec une jauge de contrainte facilement reproductible et low cost en graphite se basant sur l'article : "Pencil Drawn Strain Gauges and Chemiresistors on Paper" publié par Cheng-Wei Lin, Zhibo Zhao, Jaemyung Kim et Jiaxing Huang.  
+
+Notre problématique était la suivante: "Est ce que la sensibilité d'une jauge de contrainte en graphite peut être comparable à celle d'une jauge dans le commerce et si oui est-il possible de commercialiser cette jauge low cost et low tech à grande echelle?"
+
+--> Notre jauge de contrainte en graphite présente de relativement bonnes performances. Elle permet de pouvoir mesure des déformations de l'ordre de ...%. Et a une sensibilité.... 
+Le flex sensor peut lui supporter des déformations de l'ordre de ...% et a un sensibilité de....
+On peut en déduire que notre jauge est peut être moins performante mais a pour mérite d'être facilement reproductible et low tech. 
+
+--> En ce qui concerne la commercialisation de notre capteur? Bien qu'on ait mis en lumière des performances correctes, nos conditions de test étant assez rudimentaires, nous ne pouvons pas attester de la qualité de notre produit. Afin de pouvoir pleinement répondre à cette question, il faudrait mener des tests plus reproductibles et plus en profondeur.
+
+
 ### Contact
 
--Hamadi Maoulida: mhamadi@insa-toulouse.fr
+-Hamadi Maoulida: mhamadi@insa-toulouse.fr  
 -Tartera Maëlys : tartera@insa-toulouse.fr
 
