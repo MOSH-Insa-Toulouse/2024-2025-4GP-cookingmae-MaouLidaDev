@@ -83,10 +83,13 @@ Voici ci-dessous des images des schéma de notre PCB sous Kicad:
 ![troisd_kicad](https://github.com/MOSH-Insa-Toulouse/2024-2025-4GP-cookingmae-MaouLidaDev/blob/main/Images/3D%20du%20SHIELD.png)
 
 
+
 Le PCB a été entierement disigné sous le logiciel Kicad et imprimé au sein de deux départements de l’INSA Toulouse, le Génie Électrique et Informatique et le Génie Physique. Il a été fabriqué avec une plaquette d’époxy recouverte d’une couche de cuivre d’environ 60𝝻m sur laquelle nous avons imprimé le circuit. Pour imprimé le circuit, nous utilisons un calque nous permettant d'isoler les pistes des UVs et de venir graver à l'aide d'un bain de percholorure de fer les parties en cuivre non désirées. 
 
 Une fois le PCB tiré, nous sommes passé à la soudure des composants nécéssaires pour pouvoir analyser la réponse de notre capteur graphite. 
 Voici ci-dessous une image de notre carte une fois imprimée et une fois tout les composants ajoutés: 
+
+![carte_fini](https://github.com/MOSH-Insa-Toulouse/2024-2025-4GP-cookingmae-MaouLidaDev/blob/main/Images/carte_montage_final.jpg)
 
 
 
@@ -96,9 +99,9 @@ Voici ci-dessous une image de notre carte une fois imprimée et une fois tout le
 
 ### Banc de test
 
-Pour pouvoir compléter notre datasheet, nous devons évaluer les performances de notre capteur à travers un banc de test. Pour cela, nous utiliserons un demi cylindre à rayon variable dont nous connaissons préalablement le rayon de courbure: ![banc_test](https://github.com/MOSH-Insa-Toulouse/2024-2025-4GP-cookingmae-MaouLidaDev/blob/main/Images/BancDeTest.PNG)
+Pour pouvoir compléter notre datasheet, nous devons évaluer les performances de notre capteur à travers un banc de test. Pour cela, nous utiliserons un demi cylindre à rayon variable dont nous connaissons préalablement le rayon de courbure: ![banc_test](https://github.com/MOSH-Insa-Toulouse/2024-2025-4GP-cookingmae-MaouLidaDev/blob/main/Images/banc_de_test.jpg)
 
-Ce banc de test a été imprimé en 3D et dispose de demis-cercles de rayons variant de 2cm à 5cm avec un pas de 0,5cm par demi cercle.   
+Ce banc de test a été imprimé en 3D et dispose de demis-cercles de rayons variant de 2cm à 4,5cm avec un pas de 0,5cm par demi cercle.   
 
 Pour évaluer notre capteur en graphite, on veut pouvoir connaître la variation de résistance relative du capteur en fonction de la déformation subie. Nous notons la variation de résistance relative: $\frac{\Delta R}{R_0}$  et la déformation:  $\epsilon=\frac{e}{D}$ avec ${e}$ l'épaisseur de notre papier que l'on a mesuré à ..... et ${D}$ le diamètre du cercle choisit. Il est ainsi aisé de determiner la déformation associée à chaque demi-cercle et il ne reste plus que à mesurer la résistance ${R_0}$ de notre capteur au repos et la variation de résistance de ce dernier lorsqu'on vient le plaquer contre les différents demis-cercles. 
 
