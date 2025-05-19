@@ -101,9 +101,12 @@ Voici ci-dessous une image de notre carte une fois imprimée et une fois tout le
 
 Pour pouvoir compléter notre datasheet, nous devons évaluer les performances de notre capteur à travers un banc de test. Pour cela, nous utiliserons un demi cylindre à rayon variable dont nous connaissons préalablement le rayon de courbure: ![banc_test](https://github.com/MOSH-Insa-Toulouse/2024-2025-4GP-cookingmae-MaouLidaDev/blob/main/Images/banc_de_test.jpg)
 
-Ce banc de test a été imprimé en 3D et dispose de demis-cercles de rayons variant de 2cm à 4,5cm avec un pas de 0,5cm par demi cercle.   
+Ce banc de test a été imprimé en 3D et dispose de demis-cercles de rayons variant de 2cm à 4,5cm avec un pas de 0,5cm par demi cercle.  
 
-Pour évaluer notre capteur en graphite, on veut pouvoir connaître la variation de résistance relative du capteur en fonction de la déformation subie. Nous notons la variation de résistance relative: $\frac{\Delta R}{R_0}$  et la déformation:  $\epsilon=\frac{e}{D}$ avec ${e}$ l'épaisseur de notre papier que l'on a mesuré à ..... et ${D}$ le diamètre du cercle choisit. Il est ainsi aisé de determiner la déformation associée à chaque demi-cercle et il ne reste plus que à mesurer la résistance ${R_0}$ de notre capteur au repos et la variation de résistance de ce dernier lorsqu'on vient le plaquer contre les différents demis-cercles. 
+Pour évaluer notre capteur en graphite, on veut pouvoir connaître la variation de résistance relative du capteur en fonction de la déformation subie. Nous notons la variation de résistance relative: $\frac{\Delta R}{R_0}$  et la déformation:  $\epsilon=\frac{e}{D}$ avec ${e}$ l'épaisseur de notre papier que l'on a mesuré à e=0.2mm et ${D}$ le diamètre du cercle choisit. Il est ainsi aisé de determiner la déformation associée à chaque demi-cercle et il ne reste plus que à mesurer la résistance ${R_0}$ de notre capteur au repos et la variation de résistance de ce dernier lorsqu'on vient le plaquer contre les différents demis-cercles. 
+
+Nous souhaitions originalement utiliser cette méthode qui nous a été sugerrée en cours mais il a été compliqué pour nous de la mettre en oeuvre. En effet, notre jauge de contrainte en graphite n'est pas assez sensible et il est donc compliqué de venir tester la variation de resistance en fonction de la déformation. Nous passons à un test plus "rudimentaire" se basant sur le même principe mais sur lequel nous contrôlons cette fois l'angle d'inflexion de la jauge. On a donc  $\R=\frac{D}{2}=frac{L}{\theta}$ avec L la longueur de notre jauge mesurée à L=...
+Au final on peut écrire la déformation:  $\epsilon=\frac{2Le}{\theta}$
 
 On obtient ainsi la courbe de la variation de résistance en fonction de la déformation. Nous testons notre capteur pour differentes compositions en particule de graphite en compression et aussi en tension.
 
