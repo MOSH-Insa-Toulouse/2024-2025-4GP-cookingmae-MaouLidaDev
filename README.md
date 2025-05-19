@@ -113,6 +113,7 @@ Au final on peut écrire la déformation:  $\epsilon=\frac{e\theta}{eL}$
 
 On obtient ainsi la courbe de la variation de résistance en fonction de la déformation. Nous testons notre capteur pour differentes compositions en particule de graphite en compression et aussi en tension. On note que lorsque la déformation est positive c'est que nous étudions la tension alors que lorsqu'elle est négative c'est que nous étudions la compréssion. 
 Nous obtenons: 
+
 ![var_R/RO_crayons](https://github.com/MOSH-Insa-Toulouse/2024-2025-4GP-cookingmae-MaouLidaDev/blob/main/Images/Evolution_variation_resistance_relative_en_fonction_de_la_deformation.jpg)
 
 
@@ -137,7 +138,7 @@ Notre problématique était la suivante: "Est ce que la sensibilité d'une jauge
 
 --> Notre jauge de contrainte en graphite présente de relativement bonnes performances. Elle permet de pouvoir mesure des déformations de l'ordre de ...%. Et a une sensibilité.... 
 Le flex sensor peut lui supporter des déformations de l'ordre de ...% et a un sensibilité de....
-On peut en déduire que notre jauge est peut être moins performante mais a pour mérite d'être facilement reproductible et low tech. 
+Notre jauge low cost n'est pas aussi performante que le flex sensor l'est car elle couvre des variations de resistances plus faibles et ne permet pas de couvrir un large spectre de déformation. Le flex semble ainsi être plus resistant et permet plus de déformation. On peut en déduire que notre jauge est peut être moins performante mais a pour mérite d'être facilement reproductible et low tech. 
 
 --> En ce qui concerne la commercialisation de notre capteur? Bien qu'on ait mis en lumière des performances correctes, nos conditions de test étant assez rudimentaires, nous ne pouvons pas attester de la qualité de notre produit. Afin de pouvoir pleinement répondre à cette question, il faudrait mener des tests plus reproductibles et plus en profondeur.
 
