@@ -113,10 +113,11 @@ Au final on peut écrire la déformation:  $\epsilon=\frac{e\theta}{eL}$
 
 On obtient ainsi la courbe de la variation de résistance en fonction de la déformation. Nous testons notre capteur pour differentes compositions en particule de graphite en compression et aussi en tension. On note que lorsque la déformation est positive c'est que nous étudions la compression alors que lorsqu'elle est négative c'est que nous étudions la tension. 
 Nous obtenons: 
+![var_R/RO_crayons](https://github.com/MOSH-Insa-Toulouse/2024-2025-4GP-cookingmae-MaouLidaDev/blob/main/Images/Evolution_variation_resistance_relative_en_fonction_de_la_deformation.jpg)
 
 
 De même, nous pouvons établir uniquement en compression cette fois ($\epsilon\$>0), la courbe de variation de resistance du capteur commercial : "le flex sensor". Nous obtenons: 
-
+![var_R/RO_Flex](https://github.com/MOSH-Insa-Toulouse/2024-2025-4GP-cookingmae-MaouLidaDev/blob/main/Images/Evolution_variation_resistance_relative_en_fonction_de_la_deformation_Flex_Sensor.jpg)
 
 
 
