@@ -111,14 +111,13 @@ Pour évaluer notre capteur en graphite, on veut pouvoir connaître la variation
 Nous souhaitions originalement utiliser cette méthode qui nous a été sugerrée en cours mais il a été compliqué pour nous de la mettre en oeuvre. En effet, ayant eu des problèmes avec le potentimètre digitale nous avons dû nous limiter à l'étude des crayons les plus gras. Ces derniers ont une variation de resistance moins élevée et nous n'avons pas pu obtenir des résultats en variation de résistance avec ce banc de test. Nous passons à un test plus "rudimentaire" se basant sur le même principe mais sur lequel nous contrôlons cette fois l'angle d'inflexion (rad) de la jauge. On a donc  $R=\frac{D}{2}=\frac{L}{\theta}$ avec L la longueur de notre jauge mesurée à L=3.8cm
 Au final on peut écrire la déformation:  $\epsilon=\frac{e\theta}{eL}$
 
-On obtient ainsi la courbe de la variation de résistance en fonction de la déformation. Nous testons notre capteur pour differentes compositions en particule de graphite en compression et aussi en tension. On note que lorsque la déformation est positive c'est que nous étudions la compression alors que lorsqu'elle est négative c'est que nous étudions la tension. 
+On obtient ainsi la courbe de la variation de résistance en fonction de la déformation. Nous testons notre capteur pour differentes compositions en particule de graphite en compression et aussi en tension. On note que lorsque la déformation est positive c'est que nous étudions la tension alors que lorsqu'elle est négative c'est que nous étudions la compréssion. 
 Nous obtenons: 
 ![var_R/RO_crayons](https://github.com/MOSH-Insa-Toulouse/2024-2025-4GP-cookingmae-MaouLidaDev/blob/main/Images/Evolution_variation_resistance_relative_en_fonction_de_la_deformation.jpg)
 
 
-De même, nous pouvons établir uniquement en compression cette fois ($\epsilon\$>0), la courbe de variation de resistance du capteur commercial : "le flex sensor". Nous obtenons: 
+De même, nous pouvons établir uniquement en compression cette fois ($\epsilon$ < 0), la courbe de variation de resistance du capteur commercial : "le flex sensor". Nous obtenons: 
 ![var_R/RO_Flex](https://github.com/MOSH-Insa-Toulouse/2024-2025-4GP-cookingmae-MaouLidaDev/blob/main/Images/Evolution_variation_resistance_relative_en_fonction_de_la_deformation_Flex_Sensor.jpg)
-
 
 
 De nos observations, on constate que la résistance diminue lorsque nous sommes en compression, ce qui est normal car les particules de graphites se rapprochent les unes des autres et permettent une meilleure conductivité. Logiquement, en tension, la résistance augmente puisque qu'on rend la distance entre chaque particule de graphite beaucoup plus grande. 
