@@ -111,13 +111,13 @@ Pour évaluer notre capteur en graphite, on veut pouvoir connaître la variation
 Nous souhaitions originalement utiliser cette méthode qui nous a été sugerrée en cours mais il a été compliqué pour nous de la mettre en oeuvre. En effet, nous n'avions pas assez de variation en résistance pour les différents diamétres testés. Cela est peut être dû à un mauvais réglage du potentiomètre digitale ne nous permettant aps d'exploiter au maximal la sensibilité de la jauge. Nous passons à un test plus "rudimentaire" se basant sur le même principe mais sur lequel nous contrôlons cette fois l'angle d'inflexion (rad) de la jauge. On a donc  $R=\frac{D}{2}=\frac{L}{\theta}$ avec L la longueur de notre jauge mesurée à L=3.8cm
 Au final on peut écrire la déformation:  $\epsilon=\frac{e\theta}{2L}$
 
-On obtient ainsi la courbe de la variation de résistance en fonction de la déformation. Nous testons notre capteur pour differentes compositions en particule de graphite en compression et aussi en tension. On note que lorsque la déformation est positive c'est que nous étudions la tension alors que lorsqu'elle est négative c'est que nous étudions la compréssion. 
+On obtient ainsi la courbe de la variation de résistance en fonction de la déformation. Nous testons notre capteur pour differentes compositions en particule de graphite en compression et aussi en tension. On note que lorsque la déformation est positive c'est que nous étudions la compression (l'angle de courbure est compté positif) alors que lorsqu'elle est négative c'est que nous étudions la tension (l'angle de courbure est compté négatif). 
 Nous obtenons: 
 
 ![var_R/RO_crayons](https://github.com/MOSH-Insa-Toulouse/2024-2025-4GP-cookingmae-MaouLidaDev/blob/main/Images/Evolution_variation_resistance_relative_en_fonction_de_la_deformation.jpg)
 
 
-De même, nous pouvons établir uniquement en compression cette fois ($\epsilon$ < 0), la courbe de variation de resistance du capteur commercial : "le flex sensor". Nous obtenons: 
+De même, nous pouvons établir uniquement en tension cette fois ($\epsilon$ < 0), la courbe de variation de resistance du capteur commercial : "le flex sensor". Nous obtenons: 
 ![var_R/RO_Flex](https://github.com/MOSH-Insa-Toulouse/2024-2025-4GP-cookingmae-MaouLidaDev/blob/main/Images/Evolution_variation_resistance_relative_en_fonction_de_la_deformation_Flex_Sensor.jpg)
 
 
