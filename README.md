@@ -136,12 +136,10 @@ Le but de ce projet était de venir comparer une technologie de jauge de contrai
 
 Notre problématique était la suivante: "Est ce que la sensibilité d'une jauge de contrainte en graphite peut être comparable à celle d'une jauge dans le commerce et si oui est-il possible de commercialiser cette jauge low cost et low tech à grande echelle?"
 
---> Notre jauge de contrainte en graphite présente de relativement bonnes performances. Elle permet de pouvoir mesure des déformations de l'ordre de ...%. Et a une sensibilité.... 
-Le flex sensor peut lui supporter des déformations de l'ordre de ...% et a un sensibilité de....
-Notre jauge low cost n'est pas aussi performante que le flex sensor l'est car elle couvre des variations de resistances plus faibles et ne permet pas de couvrir un large spectre de déformation. Le flex semble ainsi être plus resistant et permet plus de déformation. On peut en déduire que notre jauge est peut être moins performante mais a pour mérite d'être facilement reproductible et low tech. 
+--> Notre jauge de contrainte en graphite permet en effet d'observer une variation de résistance en fonction de la déformation et assure donc sa mission de base. En revanche, ses performances sont limitées et sa sensibilité ne permet pas d'avoir une variation de résitance relative pour des faibles déformations. De même, lorsqu'on a des déformations importantes, le flex sensor permet de mesurer une variation de résistance alors que nos jauges se détériorent. Notre lauge low cost n'est donc pas aussi performante que le flex sensor mais a pour mérite d'être facilement reproductibe et d'exploiter le phénomène de conduction dans les systèmes granulaires et c'est assez cool! 
+Si nous souhaitions un capteur plus résistant, permettant de couvrir une large gamme de déformation, notre jauge n'est pas peut être pas le meilleur candidat. 
 
---> En ce qui concerne la commercialisation de notre capteur? Bien qu'on ait mis en lumière des performances correctes, nos conditions de test étant assez rudimentaires, nous ne pouvons pas attester de la qualité de notre produit. Afin de pouvoir pleinement répondre à cette question, il faudrait mener des tests plus reproductibles et plus en profondeur.
-
+--> En ce qui concerne la commercialisation de notre capteur? Nous venons de voir que les performances de notre jauges ne sont pas comparables à ce qui se fait sur le marché actuellement mais peut tout de même dépané et permettre de se faire une idée de la déformation. Malheureusement, nos conditions de test étant assez rudimentaires, nous ne pouvons pas attester de la qualité de notre produit. Afin de pouvoir pleinement répondre à cette question, il faudrait mener des tests plus reproductibles, plus en profondeur pour pouvoir atteindre de meilleures performances. 
 
 ### Contact
 
