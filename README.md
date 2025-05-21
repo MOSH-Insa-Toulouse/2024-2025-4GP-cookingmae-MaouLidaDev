@@ -95,7 +95,7 @@ Voici ci-dessous une image de notre carte une fois imprimée et une fois tout le
 
 ### Code Arduino 
 
-
+Pour pouvez retrouver le code commenté permettant d'avoir la variation de résistance relative en fonction de la déformation [ici](https://github.com/MOSH-Insa-Toulouse/2024-2025-4GP-cookingmae-MaouLidaDev/blob/main/Arduino/Code_Arduino.ino)
 
 ### Application Android sous MIT App Inventor
 
