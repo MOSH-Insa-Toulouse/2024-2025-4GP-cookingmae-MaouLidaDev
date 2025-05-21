@@ -95,9 +95,13 @@ Voici ci-dessous une image de notre carte une fois imprimée et une fois tout le
 
 ### Code Arduino 
 
+
+
 ### Application Android sous MIT App Inventor
 
 Pour pouvoir récupérer la variation de la résistance en fonction de la déformation, nous avont créer une application pouvant communiquer avec le module Bluetooth présent sur notre PCB. Nous avons utilisé le site MIP App Inventor. 
+Vous retrouverez notre application dans la séction dédiée. Nous avons : 
+![Android](https://github.com/MOSH-Insa-Toulouse/2024-2025-4GP-cookingmae-MaouLidaDev/blob/main/Android/Face_arri%C3%A8re.png)
 
 
 ### Banc de test
