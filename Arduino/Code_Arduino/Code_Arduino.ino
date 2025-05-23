@@ -169,7 +169,6 @@ void Calib() {
       pot_dig++;
       SPIWrite(MCP_WRITE,pot_dig,CS_pin);
       delay(100);
-      Serial.println(pot_dig);
       VAmp = analogRead(AmpOut_pin) * VCC / 1023.0;
     }    
   }
@@ -178,7 +177,6 @@ void Calib() {
       pot_dig--;
       SPIWrite(MCP_WRITE,pot_dig,CS_pin);
       delay(100);
-      Serial.println(pot_dig);
       VAmp = analogRead(AmpOut_pin) * VCC / 1023.0;
     }
   }
