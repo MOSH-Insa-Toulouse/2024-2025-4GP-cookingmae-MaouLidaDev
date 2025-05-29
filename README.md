@@ -100,10 +100,10 @@ Pour pouvez retrouver le code commenté permettant d'avoir la variation de rési
 Le but de ce code est de gérer l'acquisition des tensions en sortie de l'amplificateur et du Flex Sensor, ainsi que la calibration automatique du potentiomètre digital.
 
 Lorsque le code est téléversé sur la carte Arduino, le programme attend que le début de l'acquisition soit enclenché par l'utilisateur sur l'application Android (mentionnée plus tard). Après cette première étape, il est possible de sélectionner plusieurs actions en tournant et en appuyant sur l'encodeur rotatoire : 
--Pause qui force le programme à ne rien faire;
--Calibre A qui calibre le potentiomètre digital pour que la tension en sortie de l'AOP ne sature pas à 5V ou à 0V;
--Mesure Flex qui récupère la valeur de la tension sur le Flex Sensor et la convertit en résistance, mesure envoyée à l'application Android sous forme de byte;
--Mesure Capteur qui récupère la valeur de la tension en sortie de l'AOP et envoie la donnée à l'application Android sous forme de byte;
+    -Pause qui force le programme à ne rien faire;
+    -Calibre A qui calibre le potentiomètre digital pour que la tension en sortie de l'AOP ne sature pas à 5V ou à 0V;
+    -Mesure Flex qui récupère la valeur de la tension sur le Flex Sensor et la convertit en résistance, mesure envoyée à l'application Android sous forme de byte;
+    -Mesure Capteur qui récupère la valeur de la tension en sortie de l'AOP et envoie la donnée à l'application Android sous forme de byte;
 
 La fréquence d'échantillonage est de 2Hz (pour Mesure Flex et Capteur). Lors que l'action Calibre A est sélectionnée, le programme n'effectue que cette tâche et aucune autre fonction est activée. Cette calibration prend entre 5 et 10s.
 
@@ -116,14 +116,14 @@ Vous retrouverez notre application dans la séction dédiée. Nous avons :
 Le but de ce code est de gérer la réception des données et de leur affichage, ainsi que le calibration manuel pour initialiser la résistance variable R2.
 
 Lorsqu'on se connecte au module Bluetooth présent sur la PCB, on peut commencer l'acquisition des données. En fonction de l'action sélectionnée, on affiche sur la face-avant de l'application différentes informations. Si l'action sélectionée est :
--Pause, rien de nouveau s'affiche;
--Calibre A, il est nécéssaire d'appuyer sur le bouton "Calibration Automatique" pour récupérer la valeur de la résistance du potentiomètre digital. L'application reste figé et attend de recevoir de l'Arduino le byte associé au potentiomètre digital et affiche la valeur de la résistance et précise aussi que la calibration a été faite automatiquement;
--Mesure Flex, la valeur de la résistance est affiché dans un indicateur et sur un graphe pour suivre l'évolution de cette résistance. Il est nécessaire de placer le Switch du côté "Flex Sensor" pour avoir la bonne résistance du Flex Sensor;
--Mesure Capteur, la valeur de la résistance est affiché dans un indicateur et sur un graphe pour suivre l'évolution de cette résistance. Il est nécessaire de placer le Switch du côté "Capteur" pour avoir la bonne résistance du Capteur;
+    -Pause, rien de nouveau s'affiche;
+    -Calibre A, il est nécéssaire d'appuyer sur le bouton "Calibration Automatique" pour récupérer la valeur de la résistance du potentiomètre digital. L'application reste figé et attend de recevoir de l'Arduino le byte associé au potentiomètre digital et affiche la valeur de la résistance et précise aussi que la calibration a été faite automatiquement;
+    -Mesure Flex, la valeur de la résistance est affiché dans un indicateur et sur un graphe pour suivre l'évolution de cette résistance. Il est nécessaire de placer le Switch du côté "Flex Sensor" pour avoir la bonne résistance du Flex Sensor;
+    -Mesure Capteur, la valeur de la résistance est affiché dans un indicateur et sur un graphe pour suivre l'évolution de cette résistance. Il est nécessaire de placer le Switch du côté "Capteur" pour avoir la bonne résistance du Capteur;
 
 De plus, il est possible de rentrer manuellement la valeur de la résistance R2 si : la calibration automatique ne renvoie pas la bonne valeur mesurée sur le potentiomètre digital à l'aide d'un multimètre OU si on n'utilise pas de potentiomètre digital et qu'on le remplace simplement par une résistance. Enfin, il est possible d'arrêter l'acquisition des mesures et de la relancer, effaçant toutes les informations présentes sur le graphe et les indicateurs.
 
-(Remarque : la fréquence du code Android est de 10Hz pour récupérer le byte de données associé aux résistances du Capteur et du Flex Sensor)
+(Remarque : la fréquence du code Android est de 10Hz pour récupérer le byte de données associé aux résistances du Capteur et du Flex Sensor).
 
 ### Banc de test
 
