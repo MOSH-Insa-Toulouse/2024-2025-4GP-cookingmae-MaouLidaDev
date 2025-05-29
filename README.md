@@ -99,11 +99,11 @@ Pour pouvez retrouver le code commenté permettant d'avoir la variation de rési
 
 Le but de ce code est de gérer l'acquisition des tensions en sortie de l'amplificateur et du Flex Sensor, ainsi que la calibration automatique du potentiomètre digital.
 
-Lorsque le code est téléversé sur la carte Arduino, le programme attend que le début de l'acquisition soit enclenché par l'utilisateur sur l'application Android (mentionnée plus tard). Après cette première étape, il est possible de sélectionner plusieurs actions en tournant et en appuyant sur l'encodeur rotatoire :\ 
-    -Pause qui force le programme à ne rien faire;\
-    -Calibre A qui calibre le potentiomètre digital pour que la tension en sortie de l'AOP ne sature pas à 5V ou à 0V;\
-    -Mesure Flex qui récupère la valeur de la tension sur le Flex Sensor et la convertit en résistance, mesure envoyée à l'application Android sous forme de byte;\
-    -Mesure Capteur qui récupère la valeur de la tension en sortie de l'AOP et envoie la donnée à l'application Android sous forme de byte;
+Lorsque le code est téléversé sur la carte Arduino, le programme attend que le début de l'acquisition soit enclenché par l'utilisateur sur l'application Android (mentionnée plus tard). Après cette première étape, il est possible de sélectionner plusieurs actions en tournant et en appuyant sur l'encodeur rotatoire :\
+-Pause qui force le programme à ne rien faire;\
+-Calibre A qui calibre le potentiomètre digital pour que la tension en sortie de l'AOP ne sature pas à 5V ou à 0V;\
+-Mesure Flex qui récupère la valeur de la tension sur le Flex Sensor et la convertit en résistance, mesure envoyée à l'application Android sous forme de byte;\
+-Mesure Capteur qui récupère la valeur de la tension en sortie de l'AOP et envoie la donnée à l'application Android sous forme de byte;
 
 La fréquence d'échantillonage est de 2Hz (pour Mesure Flex et Capteur). Lors que l'action Calibre A est sélectionnée, le programme n'effectue que cette tâche et aucune autre fonction est activée. Cette calibration prend entre 5 et 10s.
 
