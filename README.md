@@ -113,7 +113,7 @@ Pour pouvoir récupérer la variation de la résistance en fonction de la défor
 Vous retrouverez notre application dans la séction dédiée. Nous avons : 
 ![Android](https://github.com/MOSH-Insa-Toulouse/2024-2025-4GP-cookingmae-MaouLidaDev/blob/main/Android/Face_arri%C3%A8re.png)
 
-Le but de ce code est de gérer la réception des données et de leur affichage, ainsi que le calibration manuel pour initialiser la résistance variable R2.
+Le but de ce code est de gérer la réception des données et de leur affichage, ainsi que la calibration manuelle pour initialiser la résistance variable R2.
 
 Lorsqu'on se connecte au module Bluetooth présent sur la PCB, on peut commencer l'acquisition des données. En fonction de l'action sélectionnée, on affiche sur la face-avant de l'application différentes informations. Si l'action sélectionée est :\
     -Pause, rien de nouveau s'affiche;\
